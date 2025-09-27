@@ -1,0 +1,25 @@
+docker_commands
+
+Crear contenedor MySQL
+docker run --name mysql-videogames -e MYSQL_ROOT_PASSWORD=12345 -p 3306:3306 -d mysql:latest
+
+Ver contenedores existentes
+docker ps -a
+
+Iniciar el contenedor
+docker start mysql-videogames
+
+Conectar via CLI
+docker exec -it mysql-videogames mysql -u root -p
+
+Ejecutar script SQL
+docker exec -i mysql-videogames mysql -u root -p12345 < script_videojuegos.sql
+
+Ver logs
+docker logs mysql-videogames
+
+Detener contenedor
+docker stop mysql-videogames
+
+Iniciar contenedor
+docker start mysql-videogames
